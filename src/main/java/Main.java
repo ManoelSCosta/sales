@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        delete();
+        findByName();
 
     }
     public static void connectToDatabase() {
@@ -70,5 +70,17 @@ public class Main {
     public static void delete() {
         int deletedRows = ProductDB.delete(7);
         System.out.println("Deleted rows: " + deletedRows);
+    }
+
+    public static void properCase() {
+        var greeting = Util.properCase("manoel costa testando mais de uma palavra");
+        System.out.println(greeting);
+    }
+
+    public static void findByName(){
+        var products = ProductDB.findByName("%mouse%");
+        for (var product : products) {
+            System.out.println(product);
+        }
     }
 }

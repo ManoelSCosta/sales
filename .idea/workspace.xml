@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6ef399a-c5fd-4279-870a-7c5d44c323a9" name="Changes" comment="Atualizando dados na tabela">
+    <list default="true" id="d6ef399a-c5fd-4279-870a-7c5d44c323a9" name="Changes" comment="Deletando dados da tabela">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Util.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ProductDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProductDB.java" afterDir="false" />
     </list>
@@ -91,7 +93,14 @@
       <option name="project" value="LOCAL" />
       <updated>1741973429448</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Deletando dados da tabela">
+      <created>1741973912556</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1741973912556</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,7 +117,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Atualizando dados na tabela" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualizando dados na tabela" />
+    <MESSAGE value="Deletando dados da tabela" />
+    <option name="LAST_COMMIT_MESSAGE" value="Deletando dados da tabela" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -118,4 +118,27 @@ public class ProductDB {
         return 0;
     }
 
+    public static List<Product> findByName(String name) {
+        String SQL = "SELECT * FROM find_products (?)";
+
+        var products = new ArrayList<Product>();
+
+        try (var conn = DB.connect();
+             var pstmt = conn.prepareStatement(SQL)) {
+            pstmt.setString(1, name);
+            var rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                var product = new Product(
+                        rs.getInt("p_id"),
+                        rs.getString("p_name"),
+                        rs.getDouble("p_price"));
+                products.add(product);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
 }
+
