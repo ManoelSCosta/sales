@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        findById();
+        update();
 
     }
     public static void connectToDatabase() {
@@ -60,6 +60,11 @@ public class Main {
         if (p != null) {
             System.out.println(p);
         }
+    }
+
+    public static void update() {
+        int updatedRows = ProductDB.update(2, "Tripe", 79.99);
+        System.out.println("Updated rows: " + updatedRows);
     }
 
 

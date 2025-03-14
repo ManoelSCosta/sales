@@ -86,4 +86,23 @@ public class ProductDB {
 
         return null;
     }
+
+    public static int update(int id, String name, double price) {
+        var sql = "UPDATE products " +
+                "SET name = ?, price = ? " +
+                "WHERE id = ?";
+        int affectedRows = 0;
+
+        try (var conn = DB.connect();
+             var pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, name);
+            pstmt.setDouble(2, price);
+            pstmt.setInt(3, id);
+            affectedRows = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return affectedRows;
+    }
+
 }
