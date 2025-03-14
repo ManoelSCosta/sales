@@ -105,4 +105,17 @@ public class ProductDB {
         return affectedRows;
     }
 
+    public static int delete(int id) {
+        var sql = "DELETE FROM products WHERE id = ?";
+
+        try (var conn = DB.connect();
+             var pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            return pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
 }

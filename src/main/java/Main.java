@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        update();
+        delete();
 
     }
     public static void connectToDatabase() {
@@ -67,5 +67,8 @@ public class Main {
         System.out.println("Updated rows: " + updatedRows);
     }
 
-
+    public static void delete() {
+        int deletedRows = ProductDB.delete(7);
+        System.out.println("Deleted rows: " + deletedRows);
+    }
 }
